@@ -10,7 +10,6 @@
             <span aria-hidden="true"></span>
         </a>
     </div>
-
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item" href="/">
@@ -20,7 +19,7 @@
             <a class="navbar-item" href="/about">
                 About
             </a>
-            <?php if(auth()): ?>
+            <?php if (auth()) : ?>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         Admin
@@ -30,16 +29,18 @@
                         <a class="navbar-item" href="/admin/posts">
                             Posts
                         </a>
+                        <a class="navbar-item" href="/admin/users"> <!-- Adding users button -->
+                            Users
+                        </a>
                     </div>
                 </div>
-            <?php endif;?>
+            <?php endif; ?>
         </div>
-
         <div class="navbar-end">
-            <?php if(auth()): ?>
+            <?php if (auth()) : ?>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        <?=auth()->email?>
+                        <?= auth()->email ?>
                     </a>
 
                     <div class="navbar-dropdown">
@@ -48,7 +49,7 @@
                         </a>
                     </div>
                 </div>
-            <?php else: ?>
+            <?php else : ?>
                 <div class="navbar-item">
                     <div class="buttons">
                         <a href="/register" class="button is-primary">
