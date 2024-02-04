@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Exceptions\NotFoundException;
 use App\Models\User;
 
-class PostsController {
+class UsersController {
     public function __construct()
     {
         if(!auth()){
