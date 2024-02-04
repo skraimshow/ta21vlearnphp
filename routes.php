@@ -20,6 +20,14 @@ Router::get('/admin/posts/edit', [PostsController::class, 'edit']);
 Router::post('/admin/posts/edit', [PostsController::class, 'update']);
 Router::get('/admin/posts/delete', [PostsController::class, 'destroy']);
 
+Router::get('/admin/users', [PostsController::class, 'index']);
+Router::get('/admin/users/new', [PostsController::class, 'create']);
+Router::post('/admin/users', [PostsController::class, 'store']);
+Router::get('/admin/users/view', [PostsController::class, 'show']);
+Router::get('/admin/users/edit', [PostsController::class, 'edit']);
+Router::post('/admin/users/edit', [PostsController::class, 'update']);
+Router::get('/admin/users/delete', [PostsController::class, 'destroy']);
+
 Router::get('/register', [AuthController::class, 'registerForm']);
 Router::post('/register', [AuthController::class, 'register']);
 Router::get('/login', [AuthController::class, 'loginForm']);
